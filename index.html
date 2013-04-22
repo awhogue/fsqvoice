@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foursquare Voice</title>
+  <link rel="stylesheet" type="text/css" href="voice.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.ba-bbq.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+  <script type="text/javascript" src="voice.js"></script> 
+</head>
+<body onload="load()";>
+  <div class="right">
+    <button id="start_button" onclick="startButton(event)">
+      <img id="start_img" src="mic.gif" alt="Start"></button>
+  </div>
+  <div id="results">
+    <span id="final_span" class="final"></span>
+    <span id="interim_span" class="interim"></span>
+    <p>
+  </div>
+  <div id=debug style="display:none;">
+    <form name=f onsubmit="debugSubmit();return false;"><input type=text name=v /></form>
+  </div>
+  <div id="output"></div>
+  <div id="map_canvas"></div>
+  <div id="help">
+    <div class=helpClose onClick="toggleDiv('help');">X</div>
+    Try these:
+    <div class=helpItem>"I'm hungry for some food."</div>
+    <div class=helpItem>"What's good to eat in Chicago?"</div>
+    <div class=helpItem>"Where do my friends like to go around Paris?"</div>
+    <div class=helpItem>"Find me a sushi place I haven't been to before."</div>
+    <div class=helpItem>"What's good at Peels?"</div>
+    <div class=helpItem>"Where is Dennis right now?"</div>
+  </div>
+  <div id="helpToggle" onClick="toggleDiv('help')">Help</div>
+</body>
+</html>
